@@ -1,0 +1,273 @@
+--DROP TABLE IF EXISTS 'address';
+
+CREATE TABLE address (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  name varchar(255) default NULL,
+  region varchar(50) default NULL,
+  country varchar(100) default NULL
+ );
+
+INSERT INTO address (name,region,country)
+VALUES
+  ('Zachary Lynn','Trentino-Alto Adige','Brazil'),
+  ('Oprah Gutierrez','New South Wales','Germany'),
+  ('Katell Barber','Veneto','Poland'),
+  ('Boris Todd','California','Austria'),
+  ('Francesca Booker','CearГЎ','Vietnam'),
+  ('Justin Vance','Western Visayas','Chile'),
+  ('Macon Tillman','North Chungcheong','Russian Federation'),
+  ('Neve Sharpe','Burgenland','Nigeria'),
+  ('Dominic Hurst','Lampung','South Africa'),
+  ('Dexter Valentine','Connecticut','Belgium');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Kyla Gallegos','Bangka Belitung Islands','United States'),
+  ('Iris Lynch','Renfrewshire','Poland'),
+  ('Leila Holland','Limpopo','Vietnam'),
+  ('Grant Stanton','Puno','Brazil'),
+  ('Nyssa Hines','Nordrhein-Westphalen','United Kingdom'),
+  ('Flynn Mitchell','Brussels Hoofdstedelijk Gewest','France'),
+  ('Rylee Leonard','Ontario','Ireland'),
+  ('Vera Stanton','Ulster','Ireland'),
+  ('Calista Blake','Bourgogne','China'),
+  ('Carlos Hansen','Gia Lai','Ireland');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Cally William','GoiГЎs','Singapore'),
+  ('Adrienne Vincent','Oost-Vlaanderen','Singapore'),
+  ('Cade Bush','Antofagasta','Peru'),
+  ('Hasad Nunez','Bangka Belitung Islands','Turkey'),
+  ('Clarke Burch','Lubelskie','Sweden'),
+  ('Desiree Wheeler','New Brunswick','India'),
+  ('Hamish Bird','Munster','Netherlands'),
+  ('Chava Buchanan','Northern Territory','Costa Rica'),
+  ('Vanna Estrada','TarapacГЎ','Costa Rica'),
+  ('Zephania Finch','JГ¶nkГ¶pings lГ¤n','Philippines');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Belle Spencer','Poltava oblast','India'),
+  ('Finn Harrington','Arica y Parinacota','Belgium'),
+  ('Alice Chen','Uttar Pradesh','Canada'),
+  ('Deirdre Harmon','Vorarlberg','Ireland'),
+  ('Xaviera Richardson','Victoria','Philippines'),
+  ('Hunter Whitfield','Azad Kashmir','United Kingdom'),
+  ('Allegra Harmon','West Bengal','France'),
+  ('Wyatt Wyatt','Vestland','Italy'),
+  ('Kitra Emerson','Tasmania','Canada'),
+  ('Beau Marsh','Piemonte','China');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Ivor Murray','Bahia','France'),
+  ('Prescott Drake','Puglia','South Africa'),
+  ('Willa Mckenzie','Ceuta','France'),
+  ('Silas Rodriguez','Gilgit Baltistan','Pakistan'),
+  ('Indigo Mcfadden','Volyn oblast','United Kingdom'),
+  ('Yvonne Newman','Antwerpen','Italy'),
+  ('Risa Koch','Poltava oblast','Pakistan'),
+  ('Jael Roberson','Oost-Vlaanderen','Peru'),
+  ('Rogan Vinson','Cantabria','New Zealand'),
+  ('Erica Hurley','Nordrhein-Westphalen','Indonesia');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Sarah Horton','Free State','Norway'),
+  ('Aurelia Hodges','VaupГ©s','Brazil'),
+  ('Eaton Molina','West Java','China'),
+  ('Lucian Davenport','Connacht','India'),
+  ('Ashely Lloyd','Cartago','Germany'),
+  ('Stephanie Donovan','Wisconsin','Colombia'),
+  ('Cherokee Gregory','Borno','Nigeria'),
+  ('Arsenio Jarvis','Central Java','Sweden'),
+  ('Xander Justice','Berlin','United States'),
+  ('Rajah Farley','South Island','South Korea');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Chanda Carr','Victoria','United States'),
+  ('Stacey West','Stockholms lГ¤n','United Kingdom'),
+  ('Mariam Wilder','South Gyeongsang','Spain'),
+  ('Tanner Reyes','Valle del Cauca','Austria'),
+  ('Nash Cervantes','Piura','Belgium'),
+  ('Benjamin Willis','Saskatchewan','United Kingdom'),
+  ('Maxwell Carlson','AisГ©n','South Korea'),
+  ('Merritt Leon','Northwest Territories','India'),
+  ('Allegra Bradley','Principado de Asturias','South Korea'),
+  ('Gage Stokes','Styria','Russian Federation');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Laura Pierce','Australian Capital Territory','Chile'),
+  ('Ulla Lowery','Stockholms lГ¤n','Pakistan'),
+  ('Odessa Yates','Alsace','India'),
+  ('Addison Osborn','North Island','Pakistan'),
+  ('Hamilton Steele','HГ  Nб»™i','Belgium'),
+  ('Warren Cotton','Quebec','Italy'),
+  ('Baker Knight','Van','South Africa'),
+  ('Lilah Cantrell','Friuli-Venezia Giulia','Brazil'),
+  ('Ivy Holman','Lima','Austria'),
+  ('Macon Norton','Nord-Pas-de-Calais','Peru');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Vincent Michael','Centre','India'),
+  ('Aquila Noel','Ancash','South Africa'),
+  ('Yuli Reese','Azad Kashmir','Australia'),
+  ('Sophia Workman','South Island','Poland'),
+  ('Yetta Torres','Jalisco','Chile'),
+  ('Mannix Clayton','Principado de Asturias','Australia'),
+  ('Aidan Mckenzie','XД«bД›i','Costa Rica'),
+  ('Britanni Barnett','Tennessee','Nigeria'),
+  ('Connor Sellers','Adana','Peru'),
+  ('Rebekah Walter','KahramanmaraЕџ','Singapore');
+INSERT INTO address (name,region,country)
+VALUES
+  ('Tatum Rocha','Luhansk oblast','Brazil'),
+  ('Erin Rivas','Cesar','Austria'),
+  ('Odessa Villarreal','Rivers','Sweden'),
+  ('George Bryan','O Higgins','Germany'),
+  ('Katell Lloyd','New South Wales','Germany'),
+  ('Eaton Molina','Tver Oblast','Australia'),
+  ('Simone Meyer','Antofagasta','Italy'),
+  ('Eve Cardenas','Manisa','China'),
+  ('Wyoming Rice','Ilocos Region','China'),
+  ('Chancellor Wheeler','ThГЎi NguyГЄn','Indonesia');
+
+
+alter table person add foreign key (idClient) references address (id);
+
+select * from ADDRESS;
+select * from PERSON;
+
+drop table person;
+drop table address;
+
+
+--DROP TABLE IF EXISTS 'person';
+
+CREATE TABLE person (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  idClient int not null,
+  name varchar(255) default NULL,
+  phone varchar(100) default NULL,
+  email varchar(255) default NULL
+);
+
+alter table person add foreign key (idClient) references address (id);
+
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (0,'Richard Shaffer','(468) 136-8452','vestibulum.lorem.sit@hotmail.org'),
+  (2,'Matthew Mcconnell','1-427-301-6132','risus.donec@yahoo.couk'),
+  (5,'Trevor Morris','(421) 464-7068','proin.vel.arcu@aol.ca'),
+  (2,'Abraham Stevens','(233) 167-8040','iaculis.odio@protonmail.org'),
+  (1,'Rose Matthews','(806) 404-1668','nulla.vulputate.dui@icloud.com'),
+  (5,'Regan Cooper','1-325-874-8963','sit.amet.nulla@outlook.com'),
+  (7,'Lacota Acevedo','(901) 162-6315','faucibus@yahoo.edu'),
+  (2,'Basil Higgins','1-400-822-3805','tincidunt.nunc@aol.couk'),
+  (5,'Cora Quinn','1-700-725-4318','a.magna.lorem@outlook.com'),
+  (2,'Lawrence Vazquez','1-633-746-0351','nullam.lobortis@aol.org');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (3,'Mollie Chandler','1-143-343-8627','duis.dignissim.tempor@hotmail.ca'),
+  (6,'Andrew Everett','1-839-631-9360','a.mi@hotmail.net'),
+  (3,'Jason Mccormick','(947) 545-7568','nulla@yahoo.org'),
+  (7,'Allen Campos','(238) 723-2962','nulla.eu@hotmail.com'),
+  (4,'Medge Shannon','1-530-749-4244','elit.pellentesque@protonmail.ca'),
+  (7,'McKenzie Burke','1-873-731-6950','egestas.rhoncus.proin@yahoo.edu'),
+  (2,'Charity Tanner','1-766-818-7677','eget.lacus@google.couk'),
+  (3,'Raymond Huff','(160) 791-6616','integer.id.magna@outlook.com'),
+  (1,'Stewart Yates','1-665-668-9369','vel.convallis@yahoo.org'),
+  (6,'Suki Gould','(751) 452-6692','nulla.magna@yahoo.org');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (3,'Tamekah Wall','1-556-127-0866','metus.vivamus@outlook.com'),
+  (6,'Vielka Ball','1-572-553-3079','justo.eu@yahoo.couk'),
+  (4,'Oren Byrd','(440) 863-3330','eu.placerat.eget@hotmail.couk'),
+  (3,'Carly Marsh','1-234-174-7722','maecenas.mi.felis@icloud.edu'),
+  (8,'Ruby Rivas','(291) 682-5100','aliquet.phasellus.fermentum@icloud.net'),
+  (3,'Yardley Waller','(394) 356-1120','donec@google.net'),
+  (5,'Lester Tyson','(854) 736-5834','faucibus.ut.nulla@google.couk'),
+  (2,'Piper England','(688) 511-8782','sed.sem@hotmail.com'),
+  (8,'Riley Hurley','1-958-358-2696','sed.et@outlook.org'),
+  (3,'Willa Ryan','1-152-231-1551','accumsan.interdum.libero@protonmail.ca');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (6,'Dai Alford','1-979-478-1130','fermentum.convallis@google.net'),
+  (2,'Curran Blankenship','1-248-321-2674','morbi@protonmail.net'),
+  (4,'Lila Flynn','1-500-713-0673','ac.mattis.velit@hotmail.couk'),
+  (2,'Constance Shaw','(873) 718-5835','neque@outlook.com'),
+  (8,'Emmanuel Myers','1-651-731-4288','cras.vulputate@hotmail.com'),
+  (5,'Kennedy Bryan','(571) 377-1073','quisque.tincidunt@aol.couk'),
+  (3,'Kyle Dale','(296) 211-6929','imperdiet.ornare@hotmail.edu'),
+  (2,'Larissa Figueroa','1-292-279-8590','et.rutrum.eu@icloud.com'),
+  (8,'Ivy Davis','1-936-622-4512','in.cursus@hotmail.ca'),
+  (3,'Levi Aguirre','(256) 525-3384','nunc.commodo@icloud.com');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (2,'Alfreda Patton','(355) 143-5463','nunc.ac@yahoo.edu'),
+  (8,'Alexa Nguyen','(593) 884-1627','sed.auctor@google.couk'),
+  (3,'Jennifer Norman','(710) 582-2521','pede.sagittis.augue@yahoo.ca'),
+  (9,'Kenyon Green','1-558-401-2316','a@yahoo.edu'),
+  (3,'Quyn Green','(787) 931-4486','quis.pede@hotmail.net'),
+  (2,'Beck Kinney','(630) 665-1305','tristique@hotmail.ca'),
+  (1,'Cameran Collins','(701) 546-2871','pharetra@aol.edu'),
+  (7,'Davis Romero','(445) 519-5311','mattis.semper.dui@protonmail.ca'),
+  (3,'Gary Phelps','1-513-153-0248','in.at@hotmail.edu'),
+  (4,'Ralph Powers','1-368-814-8246','elementum.at.egestas@outlook.edu');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (4,'Garrison Schwartz','(175) 651-8221','pharetra@google.edu'),
+  (2,'Adrienne Bradford','(591) 456-0935','nascetur@icloud.ca'),
+  (7,'Brady Cummings','1-566-363-2870','dui.fusce@outlook.com'),
+  (4,'Davis Mcguire','1-681-427-6144','ac.libero@yahoo.org'),
+  (2,'Dawn Barlow','1-854-976-0239','nunc.commodo.auctor@outlook.net'),
+  (7,'Jacob Burt','(324) 626-1477','curae.donec@yahoo.net'),
+  (2,'Francis Stafford','1-542-833-2592','risus.varius@protonmail.org'),
+  (7,'Kathleen Gregory','1-874-553-7710','eu.arcu.morbi@hotmail.couk'),
+  (3,'Zelenia Foreman','1-954-467-9546','sed.pede@yahoo.net'),
+  (8,'Hop Mcdowell','1-805-816-3477','in.magna@yahoo.edu');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (3,'Rudyard Lane','(698) 263-3084','facilisis.facilisis.magna@aol.net'),
+  (8,'Maite Vang','(241) 873-5372','ligula.nullam.enim@protonmail.ca'),
+  (6,'Emily Yates','(233) 597-5361','lectus@icloud.ca'),
+  (4,'Brianna Black','(740) 741-1812','consequat.purus.maecenas@outlook.net'),
+  (9,'Bree Vinson','(604) 371-6029','sem@outlook.ca'),
+  (4,'Ezra Ayala','1-862-354-4433','ornare.facilisis@google.org'),
+  (3,'Libby Sloan','(323) 812-1062','urna@icloud.org'),
+  (7,'Ulla Watkins','1-756-518-9512','mus.proin@hotmail.net'),
+  (3,'Selma Faulkner','1-867-143-3486','facilisis.facilisis.magna@google.com'),
+  (6,'Forrest Ryan','1-842-276-7517','malesuada.vel.convallis@protonmail.org');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (3,'Orson Aguirre','1-112-881-5258','urna.ut.tincidunt@aol.couk'),
+  (6,'Alea Sanders','(448) 165-5209','mollis@outlook.couk'),
+  (7,'Kyle Juarez','(644) 532-5280','ipsum@protonmail.couk'),
+  (2,'Imogene Cleveland','(422) 326-5727','a.feugiat@aol.ca'),
+  (8,'Ivory Stanton','(877) 887-9634','mattis.integer.eu@protonmail.edu'),
+  (2,'Dylan Conner','(522) 262-8656','imperdiet@yahoo.net'),
+  (4,'Iona Hicks','(776) 261-4285','scelerisque@yahoo.couk'),
+  (2,'Gareth Davenport','1-687-435-4246','posuere@yahoo.com'),
+  (6,'Benedict Adkins','1-321-533-4881','tellus@yahoo.org'),
+  (2,'Graiden Hatfield','(543) 762-6467','dolor.nulla@google.couk');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (8,'Buckminster Nolan','1-402-470-4218','eleifend@yahoo.edu'),
+  (2,'Jennifer Hammond','(833) 888-8170','neque.sed@icloud.net'),
+  (6,'Idona Petersen','(332) 475-2694','nam.nulla@aol.org'),
+  (1,'Reece Lloyd','(277) 772-5483','molestie@yahoo.org'),
+  (7,'Elton Wheeler','(933) 858-5710','ultrices.sit@google.net'),
+  (3,'Graiden Villarreal','(885) 648-8057','magna.sed.eu@outlook.com'),
+  (3,'Charissa Spence','1-703-512-2809','sit.amet@google.couk'),
+  (2,'Pearl Mayer','(487) 245-4118','orci@icloud.org'),
+  (2,'Bianca Lynch','(769) 916-7080','luctus@google.net'),
+  (7,'Micah Chang','(570) 703-2611','eget@icloud.couk');
+INSERT INTO person (idClient,name,phone,email)
+VALUES
+  (4,'Maryam Welch','(201) 686-5536','mattis@hotmail.edu'),
+  (5,'Hadassah Oneil','(370) 221-9742','et.netus.et@protonmail.net'),
+  (7,'Mallory Burch','1-580-846-8837','varius.nam@google.com'),
+  (3,'Wesley Reynolds','(836) 435-2155','lectus.a.sollicitudin@hotmail.com'),
+  (7,'Sage Waller','1-663-365-8443','pede.ultrices@protonmail.couk'),
+  (3,'Samuel Rice','(659) 488-2568','tristique.pharetra@yahoo.couk'),
+  (7,'Colton Garza','(216) 834-5540','aenean@hotmail.ca'),
+  (4,'Fulton Bradley','1-222-250-9237','pede.ac.urna@icloud.org'),
+  (8,'Burton Logan','1-874-876-3182','vitae.semper@yahoo.org'),
+  (3,'Frances Melton','(127) 713-4595','sit@google.edu');
+
